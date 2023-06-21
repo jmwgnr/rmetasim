@@ -132,7 +132,9 @@ void SeqAllele::RandomSeq(double a, double c, double t, double g)
     {
       // throw an exception 
     }
-  random_shuffle(dnaseq.begin(), dnaseq.end(),randWrapper);
+  // random_shuffle(dnaseq.begin(), dnaseq.end(),randWrapper);
+  
+  std::shuffle( dnaseq.begin(), dnaseq.end(),randWrapper );
 }
 
 char SeqAllele::GetSite(int sn)
